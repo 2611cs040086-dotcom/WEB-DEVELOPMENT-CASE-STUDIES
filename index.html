@@ -1,0 +1,1659 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Malla Reddy University student portal">
+<title>MRU Student Portal | R. Durga</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root {
+    --navy: #123b68;
+    --blue: #0879b9;
+    --pale: #edf5fc;
+    --ink: #263445;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f6fa;
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    background: var(--navy);
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.hero {
+    background: linear-gradient(120deg, #123b68, #0879b9);
+    color: white;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.hero h1 {
+    font-weight: 700;
+}
+
+.section-card,
+.service-card {
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #102a4312;
+}
+
+.section-card {
+    padding: 24px;
+    margin-bottom: 22px;
+    background: white;
+}
+
+.service-card {
+    height: 100%;
+    padding: 22px;
+    background: white;
+    transition: .2s;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+.section-title {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.stat {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.notice {
+    border-left: 5px solid var(--blue);
+    background: var(--pale);
+    padding: 14px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.footer {
+    background: var(--navy);
+    color: white;
+    padding: 22px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.small-muted {
+    font-size: .9rem;
+    color: #667788;
+}
+
+.pill {
+    background: #e6f2fc;
+    color: #075b91;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+@media(max-width:600px) {
+    .hero {
+        padding: 23px;
+    }
+
+    .hero h1 {
+        font-size: 1.55rem;
+    }
+
+    .section-card {
+        padding: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="#home"
+onclick="showPage('home')">
+MRU STUDENT PORTAL
+</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navMenu">
+
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home"
+onclick="showPage('home')">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#case1"
+onclick="showPage('case1')">Case 1</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#case2"
+onclick="showPage('case2')">Case 2</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#case3"
+onclick="showPage('case3')">Case 3</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#case4"
+onclick="showPage('case4')">Case 4</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#case5"
+onclick="showPage('case5')">Case 5</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+<main class="container py-4">
+
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+
+<div class="hero mb-4">
+
+<span class="pill">WEB PROGRAMMING PROJECT</span>
+
+<h1 class="mt-3">Malla Reddy University</h1>
+
+<h2 class="h4">Integrated Student Portal</h2>
+
+<p class="mb-0">
+A single responsive website combining five student-focused case studies.
+</p>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Student Details</h3>
+
+<div class="row">
+
+<div class="col-md-4">
+<b>Name</b>
+<p>R. Durga</p>
+</div>
+
+<div class="col-md-4">
+<b>Roll Number</b>
+<p>2611CS040086</p>
+</div>
+
+<div class="col-md-4">
+<b>Course</b>
+<p>B.Tech CSE</p>
+</div>
+
+</div>
+</div>
+
+<h3 class="section-title mb-3">Project Modules</h3>
+
+<div class="row g-3">
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h5>📢 Case Study 1</h5>
+<b>Student Helpdesk & Circular Portal</b>
+
+<p class="small-muted mt-2">
+Announcements, circulars, resources and student enquiry form.
+</p>
+
+<button class="btn btn-primary"
+onclick="showPage('case1')">
+Open Module
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h5>🎓 Case Study 2</h5>
+<b>Student Services Homepage</b>
+
+<p class="small-muted mt-2">
+Quick access to library, transport, hostel, placements and exams.
+</p>
+
+<button class="btn btn-primary"
+onclick="showPage('case2')">
+Open Module
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h5>📊 Case Study 3</h5>
+<b>Attendance / Exam Eligibility</b>
+
+<p class="small-muted mt-2">
+Calculate eligibility and view multiple student records.
+</p>
+
+<button class="btn btn-primary"
+onclick="showPage('case3')">
+Open Module
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h5>📝 Case Study 4</h5>
+<b>Online Student Service Form</b>
+
+<p class="small-muted mt-2">
+Apply for leave, bonafide certificates or elective courses.
+</p>
+
+<button class="btn btn-primary"
+onclick="showPage('case4')">
+Open Module
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h5>📚 Case Study 5</h5>
+<b>Student Dashboard</b>
+
+<p class="small-muted mt-2">
+Attendance, timetable, notifications, fees and exams.
+</p>
+
+<button class="btn btn-primary"
+onclick="showPage('case5')">
+Open Module
+</button>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- CASE STUDY 1 -->
+<section id="case1" class="page">
+
+<div class="hero mb-4">
+
+<h1>Student Helpdesk & Circular Portal</h1>
+
+<p>
+Academic circulars, announcements, examination updates and student enquiries.
+</p>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Latest Announcements</h3>
+
+<div class="notice">
+<b>Academic Circular</b>
+<p class="mb-0">
+Students should regularly check university announcements for academic updates.
+</p>
+</div>
+
+<div class="notice">
+<b>Assignment Reminder</b>
+<p class="mb-0">
+Submit assignments before the deadline announced by the department.
+</p>
+</div>
+
+<div class="notice">
+<b>Examination Notification</b>
+<p class="mb-0">
+Examination schedules and hall-ticket information will be announced by the university.
+</p>
+</div>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Important Links & Resources</h3>
+
+<ul>
+<li>
+<a href="https://www.mallareddyuniversity.ac.in/"
+target="_blank" rel="noopener">
+Malla Reddy University website
+</a>
+</li>
+
+<li>
+<a href="https://mail.google.com/"
+target="_blank" rel="noopener">
+Student email
+</a>
+</li>
+</ul>
+
+<button class="btn btn-outline-primary me-2 mb-2"
+onclick="downloadText('Academic Circular')">
+Download Sample Circular
+</button>
+
+<button class="btn btn-outline-primary mb-2"
+onclick="downloadText('Student Handbook')">
+Download Sample Handbook
+</button>
+
+<p class="small-muted">
+These buttons create sample text resources for demonstration.
+</p>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Student Enquiry Form</h3>
+
+<form id="enquiryForm" class="row g-3">
+
+<div class="col-md-6">
+<label class="form-label">Student Name</label>
+<input class="form-control" name="name"
+required value="R. Durga">
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Roll Number</label>
+<input class="form-control" name="roll"
+required value="2611CS040086">
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Email</label>
+<input class="form-control" name="email"
+type="email" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Enquiry Subject</label>
+<input class="form-control" name="subject" required>
+</div>
+
+<div class="col-12">
+<label class="form-label">Message</label>
+<textarea class="form-control"
+name="message" rows="3" required></textarea>
+</div>
+
+<div class="col-12">
+<button class="btn btn-primary">
+Submit Enquiry
+</button>
+</div>
+
+</form>
+
+<div id="enquiryResult"
+class="mt-3" aria-live="polite"></div>
+
+</div>
+</section>
+
+
+<!-- CASE STUDY 2 -->
+<section id="case2" class="page">
+
+<div class="hero mb-4">
+
+<h1>Student Services Homepage</h1>
+
+<p>Quick access to essential university services.</p>
+
+</div>
+
+<div class="row g-3">
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h3>📚 Library</h3>
+
+<p>
+Books, journals, digital resources and library support.
+</p>
+
+<a class="btn btn-outline-primary"
+href="https://www.mallareddyuniversity.ac.in/"
+target="_blank" rel="noopener">
+University Website
+</a>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h3>🚌 Transport</h3>
+
+<p>
+Information about bus routes, timings and transport support.
+</p>
+
+<button class="btn btn-outline-primary"
+onclick="serviceInfo('Transport')">
+View Details
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h3>🏠 Hostel</h3>
+
+<p>
+Hostel accommodation, facilities and student guidelines.
+</p>
+
+<button class="btn btn-outline-primary"
+onclick="serviceInfo('Hostel')">
+View Details
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h3>💼 Placements</h3>
+
+<p>
+Career opportunities, placement training and recruitment updates.
+</p>
+
+<button class="btn btn-outline-primary"
+onclick="serviceInfo('Placements')">
+View Details
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h3>📝 Examinations</h3>
+
+<p>
+Examination schedules, results and hall-ticket information.
+</p>
+
+<button class="btn btn-outline-primary"
+onclick="serviceInfo('Examinations')">
+View Details
+</button>
+
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<div class="service-card">
+
+<h3>🎓 Academic Information</h3>
+
+<p>
+Syllabus, academic calendar, attendance and course details.
+</p>
+
+<button class="btn btn-outline-primary"
+onclick="serviceInfo('Academic Information')">
+View Details
+</button>
+
+</div>
+</div>
+
+</div>
+
+<div class="section-card mt-4">
+
+<h3 class="section-title">Service Information</h3>
+
+<p id="serviceMessage" aria-live="polite">
+Select a service to view its information.
+</p>
+
+</div>
+</section>
+
+
+<!-- CASE STUDY 3 -->
+<section id="case3" class="page">
+
+<div class="hero mb-4">
+
+<h1>Attendance / Exam Eligibility Checker</h1>
+
+<p>
+Enter student attendance and marks to check the sample eligibility criteria.
+</p>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Check Eligibility</h3>
+
+<form id="eligibilityForm" class="row g-3">
+
+<div class="col-md-6">
+<label class="form-label">Student Name</label>
+<input id="eligName" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Roll Number</label>
+<input id="eligRoll" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Attendance (%)</label>
+<input id="attendance" class="form-control"
+type="number" min="0" max="100"
+step="0.01" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Academic Marks (out of 100)</label>
+<input id="marks" class="form-control"
+type="number" min="0" max="100"
+step="0.01" required>
+</div>
+
+<div class="col-12">
+<button class="btn btn-primary">
+Check Eligibility
+</button>
+</div>
+
+</form>
+
+<div id="eligibilityResult"
+class="mt-3" aria-live="polite"></div>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Student Records</h3>
+
+<div class="table-responsive">
+
+<table class="table table-striped">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Roll Number</th>
+<th>Attendance</th>
+<th>Marks</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="eligibilityRecords">
+
+<tr>
+<td colspan="5" class="text-center">
+No records yet.
+</td>
+</tr>
+
+</tbody>
+
+</table>
+</div>
+</div>
+</section>
+
+
+<!-- CASE STUDY 4 -->
+<section id="case4" class="page">
+
+<div class="hero mb-4">
+
+<h1>Online Student Service Portal</h1>
+
+<p>
+Submit a leave request, bonafide certificate request or elective course registration.
+</p>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Student Application Form</h3>
+
+<form id="applicationForm" class="row g-3">
+
+<div class="col-md-6">
+<label class="form-label">Student Name</label>
+<input id="appName" class="form-control"
+value="R. Durga" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Roll Number</label>
+<input id="appRoll" class="form-control"
+value="2611CS040086" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Email</label>
+<input id="appEmail" class="form-control"
+type="email" required>
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Select Service</label>
+
+<select id="appService" class="form-select" required>
+
+<option value="">Choose service</option>
+<option value="Leave">Leave Application</option>
+<option value="Bonafide">Bonafide Certificate</option>
+<option value="Course">Elective Course Registration</option>
+
+</select>
+</div>
+
+<!-- Leave Fields -->
+<div class="col-12 dynamic-fields"
+id="leaveFields" hidden>
+
+<div class="row g-3">
+
+<div class="col-md-6">
+<label class="form-label">Leave From</label>
+<input id="leaveFrom"
+class="form-control" type="date">
+</div>
+
+<div class="col-md-6">
+<label class="form-label">Leave To</label>
+<input id="leaveTo"
+class="form-control" type="date">
+</div>
+
+<div class="col-12">
+<label class="form-label">Reason</label>
+<textarea id="leaveReason"
+class="form-control" rows="2"></textarea>
+</div>
+
+</div>
+</div>
+
+<!-- Bonafide Fields -->
+<div class="col-12" id="bonafideFields" hidden>
+
+<label class="form-label">Purpose of Bonafide</label>
+
+<select id="bonafidePurpose" class="form-select">
+
+<option value="">Select purpose</option>
+<option>Scholarship</option>
+<option>Bank Account</option>
+<option>Passport</option>
+<option>Education Loan</option>
+<option>Other</option>
+
+</select>
+</div>
+
+<!-- Course Fields -->
+<div class="col-12" id="courseFields" hidden>
+
+<label class="form-label">Elective Course</label>
+
+<select id="electiveCourse" class="form-select">
+
+<option value="">Select course</option>
+<option>Artificial Intelligence</option>
+<option>Machine Learning</option>
+<option>Cyber Security</option>
+<option>Cloud Computing</option>
+<option>Data Science</option>
+
+</select>
+</div>
+
+<div class="col-12">
+
+<button class="btn btn-primary">
+Submit Application
+</button>
+
+</div>
+
+</form>
+
+<div id="applicationResult"
+class="mt-3" aria-live="polite"></div>
+
+</div>
+
+<div class="section-card">
+
+<h3 class="section-title">Submitted Requests</h3>
+
+<div id="applicationRecords">
+No requests submitted yet.
+</div>
+
+</div>
+</section>
+
+
+<!-- CASE STUDY 5 -->
+<section id="case5" class="page">
+
+<div class="hero mb-4">
+
+<h1>Student Dashboard</h1>
+
+<p>Welcome, R. Durga! Your sample academic overview.</p>
+
+<span class="small">
+Roll No: 2611CS040086 | B.Tech CSE
+</span>
+
+</div>
+
+<div class="alert alert-info alert-dismissible fade show"
+role="alert">
+
+<b>Important:</b>
+Check academic notifications and examination schedules regularly.
+
+<button type="button" class="btn-close"
+data-bs-dismiss="alert" aria-label="Close">
+</button>
+
+</div>
+
+<h3 class="section-title mb-3">Academic Overview</h3>
+
+<div class="row g-3 mb-4">
+
+<div class="col-6 col-lg-3">
+<div class="section-card text-center mb-0">
+<h6>Attendance</h6>
+<div class="stat">85%</div>
+<span class="text-success">Sample</span>
+</div>
+</div>
+
+<div class="col-6 col-lg-3">
+<div class="section-card text-center mb-0">
+<h6>CGPA</h6>
+<div class="stat">8.5</div>
+<span class="small-muted">Sample</span>
+</div>
+</div>
+
+<div class="col-6 col-lg-3">
+<div class="section-card text-center mb-0">
+<h6>Assignments</h6>
+<div class="stat">04</div>
+<span class="small-muted">Pending (sample)</span>
+</div>
+</div>
+
+<div class="col-6 col-lg-3">
+<div class="section-card text-center mb-0">
+<h6>Fee Status</h6>
+<div class="stat">₹0</div>
+<span class="text-success">No due (sample)</span>
+</div>
+</div>
+
+</div>
+
+<!-- Attendance -->
+<div class="section-card">
+
+<h3 class="section-title">Attendance</h3>
+
+<p>Overall attendance: 85% (sample data)</p>
+
+<div class="progress"
+role="progressbar"
+aria-label="Sample attendance"
+aria-valuenow="85"
+aria-valuemin="0"
+aria-valuemax="100"
+style="height:20px">
+
+<div class="progress-bar bg-success"
+style="width:85%">
+85%
+</div>
+
+</div>
+</div>
+
+<!-- Timetable -->
+<div class="section-card">
+
+<h3 class="section-title">Class Timetable</h3>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-primary">
+<tr>
+<th>Day</th>
+<th>9:00 AM</th>
+<th>10:00 AM</th>
+<th>11:00 AM</th>
+<th>12:00 PM</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Monday</td>
+<td>Python</td>
+<td>Maths</td>
+<td>HTML</td>
+<td>Physics</td>
+</tr>
+
+<tr>
+<td>Tuesday</td>
+<td>Java</td>
+<td>Python</td>
+<td>English</td>
+<td>Maths</td>
+</tr>
+
+<tr>
+<td>Wednesday</td>
+<td>HTML</td>
+<td>Physics</td>
+<td>Python</td>
+<td>Java</td>
+</tr>
+
+<tr>
+<td>Thursday</td>
+<td>Maths</td>
+<td>English</td>
+<td>Java</td>
+<td>HTML</td>
+</tr>
+
+<tr>
+<td>Friday</td>
+<td>Python</td>
+<td>Maths</td>
+<td>Physics</td>
+<td>English</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- Examination Schedule -->
+<div class="section-card">
+
+<h3 class="section-title">Examination Schedule</h3>
+
+<div class="table-responsive">
+
+<table class="table table-hover">
+
+<thead class="table-primary">
+<tr>
+<th>Subject</th>
+<th>Exam</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Python Programming</td>
+<td>Mid Term</td>
+<td>10-12-2026</td>
+</tr>
+
+<tr>
+<td>Mathematics</td>
+<td>Mid Term</td>
+<td>12-12-2026</td>
+</tr>
+
+<tr>
+<td>Web Programming</td>
+<td>Mid Term</td>
+<td>15-12-2026</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- Notifications -->
+<div class="section-card">
+
+<h3 class="section-title">Academic Notifications</h3>
+
+<div class="alert alert-warning">
+Assignment reminder: Complete pending assignments.
+</div>
+
+<div class="alert alert-info">
+Examination update: Check the examination schedule.
+</div>
+
+<div class="alert alert-success">
+University update: Follow official announcements.
+</div>
+
+</div>
+
+<!-- Carousel -->
+<div class="section-card">
+
+<h3 class="section-title">University Updates</h3>
+
+<div id="updatesCarousel"
+class="carousel slide"
+data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active text-center p-5 bg-light">
+<h4>📚 Library Services</h4>
+<p>Explore books and digital learning resources.</p>
+</div>
+
+<div class="carousel-item text-center p-5 bg-light">
+<h4>💼 Placement Updates</h4>
+<p>Prepare for upcoming placement opportunities.</p>
+</div>
+
+<div class="carousel-item text-center p-5 bg-light">
+<h4>🎓 Academic Activities</h4>
+<p>Participate in university events and activities.</p>
+</div>
+
+</div>
+
+<button class="carousel-control-prev"
+type="button"
+data-bs-target="#updatesCarousel"
+data-bs-slide="prev">
+
+<span class="carousel-control-prev-icon bg-secondary rounded"></span>
+<span class="visually-hidden">Previous</span>
+
+</button>
+
+<button class="carousel-control-next"
+type="button"
+data-bs-target="#updatesCarousel"
+data-bs-slide="next">
+
+<span class="carousel-control-next-icon bg-secondary rounded"></span>
+<span class="visually-hidden">Next</span>
+
+</button>
+
+</div>
+</div>
+
+<!-- Student Services -->
+<div class="section-card">
+
+<h3 class="section-title">Student Services</h3>
+
+<div class="row g-3">
+
+<div class="col-md-4">
+<div class="service-card">
+
+<h5>📚 Library</h5>
+<p>Library resources and support.</p>
+
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#dashboardModal"
+data-detail="Library service information. Contact the university office for official details.">
+View Details
+</button>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-card">
+
+<h5>🚌 Transport</h5>
+<p>Bus routes and transport support.</p>
+
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#dashboardModal"
+data-detail="Transport service information. Contact the university office for official details.">
+View Details
+</button>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-card">
+
+<h5>🏠 Hostel</h5>
+<p>Hostel facilities and guidelines.</p>
+
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#dashboardModal"
+data-detail="Hostel service information. Contact the university office for official details.">
+View Details
+</button>
+
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- AI Customization -->
+<div class="section-card">
+
+<h3 class="section-title">
+AI-Assisted UI Customization Demo
+</h3>
+
+<p>
+This demonstration changes the dashboard theme using JavaScript.
+It does not connect to a live AI service.
+</p>
+
+<button class="btn btn-primary me-2"
+onclick="setTheme(true)">
+Customize Theme
+</button>
+
+<button class="btn btn-outline-secondary"
+onclick="setTheme(false)">
+Reset Theme
+</button>
+
+<p id="themeMessage"
+class="mt-3 mb-0"
+aria-live="polite">
+</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- MODAL -->
+<div class="modal fade"
+id="dashboardModal"
+tabindex="-1"
+aria-labelledby="dashboardModalTitle"
+aria-hidden="true">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title" id="dashboardModalTitle">
+Student Service
+</h5>
+
+<button type="button"
+class="btn-close"
+data-bs-dismiss="modal"
+aria-label="Close">
+</button>
+
+</div>
+
+<div class="modal-body" id="dashboardModalBody">
+Service information
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-secondary"
+data-bs-dismiss="modal">
+Close
+</button>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<p class="mb-1">
+© 2026 Malla Reddy University — Student Portal
+</p>
+
+<p class="mb-0">
+Developed by R. Durga | 2611CS040086
+</p>
+
+</footer>
+
+
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+
+// Navigation between the five case-study modules
+function showPage(id) {
+
+    document.querySelectorAll('.page').forEach(p => {
+        p.classList.remove('active');
+    });
+
+    const page = document.getElementById(id);
+
+    if (page) {
+        page.classList.add('active');
+    }
+
+    document.getElementById('navMenu').classList.remove('show');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+
+// CASE 1: ENQUIRY FORM
+document.getElementById('enquiryForm')
+.addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const data = new FormData(this);
+
+    document.getElementById('enquiryResult').innerHTML =
+        '<div class="alert alert-success">Thank you, ' +
+        escapeHTML(data.get('name')) +
+        '. Your enquiry has been recorded for this demo.</div>';
+
+    this.reset();
+
+});
+
+
+// Download sample resources
+function downloadText(title) {
+
+    const blob = new Blob([
+        title +
+        '\nMalla Reddy University\n' +
+        'Sample resource for the Student Helpdesk portal.'
+    ], {
+        type: 'text/plain'
+    });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+
+    a.href = url;
+    a.download = title.replaceAll(' ', '_') + '.txt';
+
+    a.click();
+
+    URL.revokeObjectURL(url);
+}
+
+
+// CASE 2: STUDENT SERVICES
+function serviceInfo(name) {
+
+    document.getElementById('serviceMessage').textContent =
+        name +
+        ': This section provides general information. ' +
+        'Contact the relevant university office for official service details.';
+
+}
+
+
+// CASE 3: ELIGIBILITY CHECKER
+const studentRecords = [];
+
+document.getElementById('eligibilityForm')
+.addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById('eligName').value.trim();
+
+    const roll =
+        document.getElementById('eligRoll').value.trim();
+
+    const attendance =
+        Number(document.getElementById('attendance').value);
+
+    const marks =
+        Number(document.getElementById('marks').value);
+
+    if (
+        !name ||
+        !roll ||
+        attendance < 0 ||
+        attendance > 100 ||
+        marks < 0 ||
+        marks > 100
+    ) {
+
+        alert(
+            'Enter valid details. Attendance and marks must be between 0 and 100.'
+        );
+
+        return;
+    }
+
+    const status =
+        attendance >= 75 && marks >= 40
+        ? 'Eligible'
+        : 'Not Eligible';
+
+    const student = {
+        name,
+        roll,
+        attendance,
+        marks,
+        status
+    };
+
+    studentRecords.push(student);
+
+    document.getElementById('eligibilityResult').innerHTML =
+        '<div class="alert ' +
+        (status === 'Eligible'
+        ? 'alert-success'
+        : 'alert-danger') +
+        '"><b>' + status +
+        '</b> — ' + escapeHTML(name) +
+        ', Attendance: ' + attendance +
+        '%, Marks: ' + marks + '</div>';
+
+    renderStudentRecords();
+
+    this.reset();
+
+});
+
+
+// Display student records
+function renderStudentRecords() {
+
+    const body =
+        document.getElementById('eligibilityRecords');
+
+    body.replaceChildren();
+
+    studentRecords.forEach(s => {
+
+        const tr = document.createElement('tr');
+
+        [
+            s.name,
+            s.roll,
+            s.attendance + '%',
+            s.marks,
+            s.status
+        ].forEach(v => {
+
+            const td = document.createElement('td');
+
+            td.textContent = v;
+
+            tr.appendChild(td);
+
+        });
+
+        body.appendChild(tr);
+
+    });
+
+}
+
+
+// CASE 4: ONLINE STUDENT APPLICATION
+const appService =
+    document.getElementById('appService');
+
+const fieldGroups = {
+
+    Leave: document.getElementById('leaveFields'),
+
+    Bonafide: document.getElementById('bonafideFields'),
+
+    Course: document.getElementById('courseFields')
+
+};
+
+
+// Show fields according to selected service
+appService.addEventListener('change', () => {
+
+    Object.values(fieldGroups).forEach(el => {
+        el.hidden = true;
+    });
+
+    if (fieldGroups[appService.value]) {
+        fieldGroups[appService.value].hidden = false;
+    }
+
+});
+
+
+const applications = [];
+
+document.getElementById('applicationForm')
+.addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById('appName').value.trim();
+
+    const roll =
+        document.getElementById('appRoll').value.trim();
+
+    const email =
+        document.getElementById('appEmail').value.trim();
+
+    const type = appService.value;
+
+    let detail = '';
+
+    if (type === 'Leave') {
+
+        const from =
+            document.getElementById('leaveFrom').value;
+
+        const to =
+            document.getElementById('leaveTo').value;
+
+        const reason =
+            document.getElementById('leaveReason').value.trim();
+
+        if (!from || !to || !reason) {
+
+            alert('Complete all leave details.');
+
+            return;
+        }
+
+        if (to < from) {
+
+            alert('Leave end date cannot be before start date.');
+
+            return;
+        }
+
+        detail =
+            'Leave: ' + from +
+            ' to ' + to +
+            '; Reason: ' + reason;
+
+    }
+
+    else if (type === 'Bonafide') {
+
+        const purpose =
+            document.getElementById('bonafidePurpose').value;
+
+        if (!purpose) {
+
+            alert('Select the bonafide purpose.');
+
+            return;
+        }
+
+        detail = 'Bonafide purpose: ' + purpose;
+
+    }
+
+    else if (type === 'Course') {
+
+        const course =
+            document.getElementById('electiveCourse').value;
+
+        if (!course) {
+
+            alert('Select an elective course.');
+
+            return;
+        }
+
+        detail = 'Elective course: ' + course;
+
+    }
+
+    else {
+
+        alert('Select a service.');
+
+        return;
+    }
+
+    const app = {
+        name,
+        roll,
+        email,
+        type,
+        detail
+    };
+
+    applications.push(app);
+
+    document.getElementById('applicationResult').innerHTML =
+        '<div class="alert alert-success">' +
+        'Application submitted in this demo. Type: ' +
+        escapeHTML(type) + '.</div>';
+
+    renderApplications();
+
+    this.reset();
+
+    Object.values(fieldGroups).forEach(el => {
+        el.hidden = true;
+    });
+
+});
+
+
+// Display submitted applications
+function renderApplications() {
+
+    const list =
+        document.getElementById('applicationRecords');
+
+    list.replaceChildren();
+
+    applications.forEach((a, i) => {
+
+        const div = document.createElement('div');
+
+        div.className = 'notice';
+
+        const strong = document.createElement('b');
+
+        strong.textContent =
+            (i + 1) + '. ' + a.type + ' — ' + a.name;
+
+        const p = document.createElement('p');
+
+        p.className = 'mb-0';
+
+        p.textContent =
+            a.roll + ' | ' + a.detail;
+
+        div.append(strong, p);
+
+        list.appendChild(div);
+
+    });
+
+}
+
+
+// CASE 5: BOOTSTRAP MODAL
+document.getElementById('dashboardModal')
+.addEventListener('show.bs.modal', e => {
+
+    document.getElementById('dashboardModalBody').textContent =
+        e.relatedTarget.getAttribute('data-detail');
+
+});
+
+
+// Theme customization
+function setTheme(enabled) {
+
+    document.body.style.background =
+        enabled ? '#e5f1ff' : '#f3f6fa';
+
+    document.querySelectorAll(
+        '.section-card,.service-card'
+    ).forEach(c => {
+
+        c.style.background =
+            enabled ? '#f4faff' : '#fff';
+
+    });
+
+    document.getElementById('themeMessage').textContent =
+        enabled
+        ? 'Dashboard theme customized successfully.'
+        : 'Dashboard theme reset.';
+
+}
+
+
+// HTML special character protection
+function escapeHTML(value) {
+
+    return String(value).replace(/[&<>"']/g, ch => ({
+
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+
+    }[ch]));
+
+}
+
+</script>
+
+</body>
+</html>
