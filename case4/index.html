@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Online Student Service Portal</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #123b68;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 27px;
+}
+
+/* Navigation */
+nav {
+    background: #0879b9;
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 30px auto;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+h2 {
+    color: #123b68;
+    margin-bottom: 18px;
+}
+
+/* Form */
+label {
+    display: block;
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px;
+    margin-top: 7px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+button {
+    background: #0879b9;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #123b68;
+}
+
+/* Dynamic Fields */
+.hidden {
+    display: none;
+}
+
+/* Feedback */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    display: none;
+    background: #d4edda;
+    color: #155724;
+    line-height: 1.8;
+}
+
+/* Request Records */
+.request {
+    background: #edf6ff;
+    padding: 15px;
+    margin-top: 12px;
+    border-left: 5px solid #0879b9;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #123b68;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>MALLA REDDY UNIVERSITY</h1>
+    <p>Online Student Service Portal</p>
+    <p>Leave | Bonafide | Course Registration</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#form">Apply Online</a>
+    <a href="#records">My Requests</a>
+</nav>
+
+<main class="container">
+
+<!-- Home Section -->
+<section class="card" id="home">
+
+    <h2>Welcome Students!</h2>
+
+    <p>
+        This portal helps students apply for leave,
+        request bonafide certificates and register
+        for elective courses online.
+    </p>
+
+    <br>
+
+    <p><b>Name:</b> R. Durga</p>
+    <p><b>Roll Number:</b> 2611CS040086</p>
+    <p><b>Department:</b> B.Tech CSE</p>
+
+</section>
+
+<!-- Application Form -->
+<section class="card" id="form">
+
+    <h2>Student Application Form</h2>
+
+    <form id="studentForm">
+
+        <label>Student Name:</label>
+        <input type="text" id="name"
+        placeholder="Enter your name" required>
+
+        <label>Roll Number:</label>
+        <input type="text" id="roll"
+        placeholder="Enter roll number" required>
+
+        <label>Email Address:</label>
+        <input type="email" id="email"
+        placeholder="Enter email address" required>
+
+        <label>Select Service:</label>
+
+        <select id="service" required>
+            <option value="">Choose a service</option>
+            <option value="Leave">Leave Application</option>
+            <option value="Bonafide">Bonafide Certificate</option>
+            <option value="Course">Course Registration</option>
+        </select>
+
+        <!-- Leave Application -->
+        <div id="leaveFields" class="hidden">
+
+            <label>Leave From:</label>
+            <input type="date" id="fromDate">
+
+            <label>Leave To:</label>
+            <input type="date" id="toDate">
+
+            <label>Reason for Leave:</label>
+            <textarea id="reason"
+            rows="3"
+            placeholder="Enter leave reason"></textarea>
+
+        </div>
+
+        <!-- Bonafide Application -->
+        <div id="bonafideFields" class="hidden">
+
+            <label>Purpose of Bonafide:</label>
+
+            <select id="purpose">
+                <option value="">Select purpose</option>
+                <option>Scholarship</option>
+                <option>Bank Account</option>
+                <option>Passport</option>
+                <option>Education Loan</option>
+                <option>Other</option>
+            </select>
+
+        </div>
+
+        <!-- Course Registration -->
+        <div id="courseFields" class="hidden">
+
+            <label>Select Elective Course:</label>
+
+            <select id="course">
+                <option value="">Select course</option>
+                <option>Artificial Intelligence</option>
+                <option>Machine Learning</option>
+                <option>Cyber Security</option>
+                <option>Cloud Computing</option>
+                <option>Data Science</option>
+            </select>
+
+        </div>
+
+        <button type="submit">
+            Submit Application
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+</section>
+
+<!-- Request Records -->
+<section class="card" id="records">
+
+    <h2>Submitted Requests</h2>
+
+    <div id="requestList">
+        <p>No requests submitted yet.</p>
+    </div>
+
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Malla Reddy University</p>
+    <p>Online Student Service Portal</p>
+    <p>Developed by R. Durga | 2611CS040086</p>
+</footer>
+
+<script>
+
+// Array to store applications
+let applications = [];
+
+// Get HTML elements
+let service = document.getElementById("service");
+
+let leaveFields =
+document.getElementById("leaveFields");
+
+let bonafideFields =
+document.getElementById("bonafideFields");
+
+let courseFields =
+document.getElementById("courseFields");
+
+// Show fields based on selected service
+service.addEventListener("change", function() {
+
+    leaveFields.classList.add("hidden");
+    bonafideFields.classList.add("hidden");
+    courseFields.classList.add("hidden");
+
+    if (service.value === "Leave") {
+        leaveFields.classList.remove("hidden");
+    }
+
+    else if (service.value === "Bonafide") {
+        bonafideFields.classList.remove("hidden");
+    }
+
+    else if (service.value === "Course") {
+        courseFields.classList.remove("hidden");
+    }
+
+});
+
+// Form submission
+document.getElementById("studentForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Get student details
+    let name = document.getElementById("name").value.trim();
+    let roll = document.getElementById("roll").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    let selectedService = service.value;
+
+    let details = "";
+
+    // Leave validation
+    if (selectedService === "Leave") {
+
+        let from = document.getElementById("fromDate").value;
+        let to = document.getElementById("toDate").value;
+        let reason = document.getElementById("reason").value.trim();
+
+        if (!from || !to || !reason) {
+            alert("Please fill all leave details.");
+            return;
+        }
+
+        if (to < from) {
+            alert("End date cannot be before start date.");
+            return;
+        }
+
+        details = "Leave From: " + from +
+                  ", Leave To: " + to +
+                  ", Reason: " + reason;
+
+    }
+
+    // Bonafide validation
+    else if (selectedService === "Bonafide") {
+
+        let purpose = document.getElementById("purpose").value;
+
+        if (!purpose) {
+            alert("Please select bonafide purpose.");
+            return;
+        }
+
+        details = "Purpose: " + purpose;
+
+    }
+
+    // Course validation
+    else if (selectedService === "Course") {
+
+        let course = document.getElementById("course").value;
+
+        if (!course) {
+            alert("Please select a course.");
+            return;
+        }
+
+        details = "Selected Course: " + course;
+
+    }
+
+    // Create application object
+    let application = {
+
+        name: name,
+        roll: roll,
+        email: email,
+        service: selectedService,
+        details: details,
+        status: "Submitted"
+
+    };
+
+    // Store application in array
+    applications.push(application);
+
+    // Display success message
+    let result = document.getElementById("result");
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "<h3>Application Submitted Successfully!</h3>" +
+        "<p>Name: " + name + "</p>" +
+        "<p>Roll Number: " + roll + "</p>" +
+        "<p>Service: " + selectedService + "</p>" +
+        "<p>" + details + "</p>" +
+        "<p>Status: Submitted</p>";
+
+    // Display all requests
+    displayRequests();
+
+    // Reset form
+    this.reset();
+
+    // Hide dynamic fields
+    leaveFields.classList.add("hidden");
+    bonafideFields.classList.add("hidden");
+    courseFields.classList.add("hidden");
+
+});
+
+// Display submitted requests
+function displayRequests() {
+
+    let list = document.getElementById("requestList");
+
+    list.innerHTML = "";
+
+    // Loop through applications
+    for (let i = 0; i < applications.length; i++) {
+
+        let app = applications[i];
+
+        let div = document.createElement("div");
+
+        div.className = "request";
+
+        let heading = document.createElement("h3");
+        heading.textContent = app.service + " Application";
+
+        let student = document.createElement("p");
+        student.textContent = "Name: " + app.name;
+
+        let roll = document.createElement("p");
+        roll.textContent = "Roll Number: " + app.roll;
+
+        let details = document.createElement("p");
+        details.textContent = app.details;
+
+        let status = document.createElement("p");
+        status.textContent = "Status: " + app.status;
+
+        div.appendChild(heading);
+        div.appendChild(student);
+        div.appendChild(roll);
+        div.appendChild(details);
+        div.appendChild(status);
+
+        list.appendChild(div);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
