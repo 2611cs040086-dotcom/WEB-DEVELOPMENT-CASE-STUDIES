@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard - MRU</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<style>
+body {
+    background: #f2f5fa;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: #123b68;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.hero {
+    background: linear-gradient(120deg, #123b68, #0879b9);
+    color: white;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0879b9;
+}
+
+.section-title {
+    color: #123b68;
+    font-weight: bold;
+}
+
+footer {
+    background: #123b68;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.carousel-item {
+    background: #e1efff;
+    padding: 35px;
+    min-height: 150px;
+    text-align: center;
+    color: #123b68;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+
+<a class="navbar-brand" href="#">MRU STUDENT DASHBOARD</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#attendance">Attendance</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#timetable">Timetable</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#notifications">Notifications</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#services">Services</a>
+</li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+
+<main class="container my-4">
+
+<!-- WELCOME SECTION -->
+<section class="hero mb-4" id="home">
+
+<h2>Welcome, R. Durga! 👋</h2>
+
+<p>Welcome to Malla Reddy University Student Dashboard.</p>
+
+<p>
+<strong>Roll Number:</strong> 2611CS040086
+<br>
+<strong>Department:</strong> B.Tech CSE
+</p>
+
+</section>
+
+
+<!-- ALERT -->
+<div class="alert alert-info alert-dismissible fade show"
+role="alert">
+
+<strong>Important Notice!</strong>
+Check your examination schedule and academic notifications regularly.
+
+<button type="button" class="btn-close"
+data-bs-dismiss="alert"></button>
+
+</div>
+
+
+<!-- DASHBOARD CARDS -->
+<h3 class="section-title mb-3">Academic Overview</h3>
+
+<div class="row g-3 mb-4">
+
+<div class="col-md-3 col-sm-6">
+<div class="card p-3 text-center">
+<h5>Attendance</h5>
+<div class="stat-number">85%</div>
+<p class="text-success">Good Attendance</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+<div class="card p-3 text-center">
+<h5>CGPA</h5>
+<div class="stat-number">8.5</div>
+<p class="text-success">Academic Performance</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+<div class="card p-3 text-center">
+<h5>Assignments</h5>
+<div class="stat-number">04</div>
+<p>Pending Assignments</p>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+<div class="card p-3 text-center">
+<h5>Fees</h5>
+<div class="stat-number">₹0</div>
+<p class="text-success">No Due (Sample)</p>
+</div>
+</div>
+
+</div>
+
+
+<!-- ATTENDANCE -->
+<section class="card p-4 mb-4" id="attendance">
+
+<h3 class="section-title">Attendance Details</h3>
+
+<p>Overall Attendance: 85%</p>
+
+<div class="progress" style="height:20px;">
+<div class="progress-bar bg-success"
+style="width:85%">
+85%
+</div>
+</div>
+
+<p class="mt-3">
+Attendance status: Eligible (sample data)
+</p>
+
+</section>
+
+
+<!-- TIMETABLE -->
+<section class="card p-4 mb-4" id="timetable">
+
+<h3 class="section-title">Class Timetable</h3>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-primary">
+<tr>
+<th>Day</th>
+<th>9:00 AM</th>
+<th>10:00 AM</th>
+<th>11:00 AM</th>
+<th>12:00 PM</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Monday</td>
+<td>Python</td>
+<td>Maths</td>
+<td>HTML</td>
+<td>Physics</td>
+</tr>
+
+<tr>
+<td>Tuesday</td>
+<td>Java</td>
+<td>Python</td>
+<td>English</td>
+<td>Maths</td>
+</tr>
+
+<tr>
+<td>Wednesday</td>
+<td>HTML</td>
+<td>Physics</td>
+<td>Python</td>
+<td>Java</td>
+</tr>
+
+<tr>
+<td>Thursday</td>
+<td>Maths</td>
+<td>English</td>
+<td>Java</td>
+<td>HTML</td>
+</tr>
+
+<tr>
+<td>Friday</td>
+<td>Python</td>
+<td>Maths</td>
+<td>Physics</td>
+<td>English</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+</section>
+
+
+<!-- EXAMINATION SCHEDULE -->
+<section class="card p-4 mb-4">
+
+<h3 class="section-title">Examination Schedule</h3>
+
+<div class="table-responsive">
+
+<table class="table table-hover">
+
+<thead class="table-primary">
+<tr>
+<th>Subject</th>
+<th>Examination</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Python Programming</td>
+<td>Mid Term</td>
+<td>10-12-2026</td>
+</tr>
+
+<tr>
+<td>Mathematics</td>
+<td>Mid Term</td>
+<td>12-12-2026</td>
+</tr>
+
+<tr>
+<td>Web Programming</td>
+<td>Mid Term</td>
+<td>15-12-2026</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+
+</section>
+
+
+<!-- NOTIFICATIONS -->
+<section class="card p-4 mb-4" id="notifications">
+
+<h3 class="section-title">Academic Notifications</h3>
+
+<div class="alert alert-warning">
+<strong>Assignment Reminder:</strong>
+Complete your pending assignments.
+</div>
+
+<div class="alert alert-info">
+<strong>Examination Update:</strong>
+Check your examination schedule regularly.
+</div>
+
+<div class="alert alert-success">
+<strong>College Update:</strong>
+Keep checking university announcements.
+</div>
+
+</section>
+
+
+<!-- CAROUSEL -->
+<section class="card p-3 mb-4">
+
+<h3 class="section-title">University Updates</h3>
+
+<div id="myCarousel" class="carousel slide"
+data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<h4>📚 Library Services</h4>
+<p>Explore books and digital learning resources.</p>
+</div>
+
+<div class="carousel-item">
+<h4>💼 Placement Updates</h4>
+<p>Prepare for upcoming placement opportunities.</p>
+</div>
+
+<div class="carousel-item">
+<h4>🎓 Academic Activities</h4>
+<p>Participate in university events and activities.</p>
+</div>
+
+</div>
+
+<button class="carousel-control-prev"
+type="button" data-bs-target="#myCarousel"
+data-bs-slide="prev">
+
+<span class="carousel-control-prev-icon"
+aria-hidden="true"></span>
+
+<span class="visually-hidden">Previous</span>
+</button>
+
+<button class="carousel-control-next"
+type="button" data-bs-target="#myCarousel"
+data-bs-slide="next">
+
+<span class="carousel-control-next-icon"
+aria-hidden="true"></span>
+
+<span class="visually-hidden">Next</span>
+</button>
+
+</div>
+</section>
+
+
+<!-- STUDENT SERVICES -->
+<section class="mb-4" id="services">
+
+<h3 class="section-title mb-3">Student Services</h3>
+
+<div class="row g-3">
+
+<div class="col-md-4">
+<div class="card p-3 text-center">
+<h4>📚 Library</h4>
+<p>Access library information.</p>
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#serviceModal"
+data-service="Library">
+View Details
+</button>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3 text-center">
+<h4>🚌 Transport</h4>
+<p>Check transport information.</p>
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#serviceModal"
+data-service="Transport">
+View Details
+</button>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3 text-center">
+<h4>🏠 Hostel</h4>
+<p>Explore hostel facilities.</p>
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#serviceModal"
+data-service="Hostel">
+View Details
+</button>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="serviceModal"
+tabindex="-1">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title">Student Service</h5>
+
+<button type="button" class="btn-close"
+data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body" id="modalBody">
+Service information
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-secondary"
+data-bs-dismiss="modal">
+Close
+</button>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- AI ASSISTED SECTION -->
+<section class="card p-4 mb-4">
+
+<h3 class="section-title">AI-Assisted Dashboard Customization</h3>
+
+<p>
+This section demonstrates a sample AI-assisted
+Bootstrap code customization feature.
+</p>
+
+<button class="btn btn-primary"
+onclick="changeTheme()">
+Customize Dashboard Theme
+</button>
+
+<button class="btn btn-outline-secondary"
+onclick="resetTheme()">
+Reset Theme
+</button>
+
+<p id="aiMessage" class="mt-3 text-success"></p>
+
+</section>
+
+
+<!-- FOOTER INFORMATION -->
+<section class="card p-4">
+
+<h3 class="section-title">Student Information</h3>
+
+<p><strong>Name:</strong> R. Durga</p>
+<p><strong>Roll Number:</strong> 2611CS040086</p>
+<p><strong>Department:</strong> B.Tech CSE</p>
+<p><strong>University:</strong> Malla Reddy University</p>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>© 2026 Malla Reddy University</p>
+
+<p>Student Dashboard</p>
+
+<p>Developed by R. Durga | 2611CS040086</p>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+
+// Service Modal
+let serviceModal = document.getElementById("serviceModal");
+
+serviceModal.addEventListener("show.bs.modal", function(event) {
+
+    let button = event.relatedTarget;
+
+    let service = button.getAttribute("data-service");
+
+    document.getElementById("modalBody").textContent =
+        "Welcome to " + service +
+        " Services. Please contact the university office for more information.";
+
+});
+
+// AI-assisted theme customization demonstration
+function changeTheme() {
+
+    document.body.style.background = "#e4f0ff";
+
+    document.querySelectorAll(".card").forEach(function(card) {
+        card.style.background = "#f0f8ff";
+    });
+
+    document.getElementById("aiMessage").textContent =
+        "Dashboard theme customized successfully!";
+}
+
+// Reset Theme
+function resetTheme() {
+
+    document.body.style.background = "#f2f5fa";
+
+    document.querySelectorAll(".card").forEach(function(card) {
+        card.style.background = "white";
+    });
+
+    document.getElementById("aiMessage").textContent =
+        "Dashboard theme reset successfully!";
+}
+
+</script>
+
+</body>
+</html>
