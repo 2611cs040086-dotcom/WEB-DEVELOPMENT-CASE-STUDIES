@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Helpdesk & Circular Portal</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #123b68;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 5px;
+}
+
+/* Navigation */
+nav {
+    background: #0879b9;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(120deg, #dceeff, #b5d9f5);
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 450px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.hero h2 {
+    color: #123b68;
+    font-size: 26px;
+}
+
+/* Main Content */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.section {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+h2 {
+    color: #0879b9;
+    margin-bottom: 15px;
+}
+
+/* Notice Cards */
+.notice {
+    background: #edf6ff;
+    padding: 15px;
+    border-left: 5px solid #0879b9;
+    margin-bottom: 12px;
+    border-radius: 5px;
+}
+
+.notice h3 {
+    color: #123b68;
+}
+
+/* Links */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #0879b9;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 15px;
+}
+
+button {
+    background: #0879b9;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #123b68;
+}
+
+#message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #123b68;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>MALLA REDDY UNIVERSITY</h1>
+    <p>Student Helpdesk & Circular Portal</p>
+    <p>Welcome to the Student Information Portal</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#notices">Notices</a>
+    <a href="#exams">Examinations</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Enquiry</a>
+</nav>
+
+<main>
+
+<!-- Home Section -->
+<section class="hero" id="home">
+    <h2>Welcome to Student Helpdesk</h2>
+    <p>
+        Get the latest university announcements,
+        academic circulars and examination updates
+        in one place.
+    </p>
+
+    <img
+    src="https://images.unsplash.com/photo-1562774053-701939374585?w=900"
+    alt="University campus building">
+</section>
+
+<div class="container">
+
+<!-- Student Details -->
+<section class="section">
+    <h2>Student Details</h2>
+    <p><b>Name:</b> R. Durga</p>
+    <p><b>Roll Number:</b> 2611CS040086</p>
+    <p><b>Department:</b> B.Tech CSE</p>
+</section>
+
+<!-- Announcements -->
+<section class="section" id="notices">
+    <h2>Latest Announcements</h2>
+
+    <div class="notice">
+        <h3>College Announcement</h3>
+        <p>Students are requested to check the
+        university website for the latest updates.</p>
+    </div>
+
+    <div class="notice">
+        <h3>Assignment Submission</h3>
+        <p>All students should submit their assignments
+        before the last date.</p>
+    </div>
+
+    <div class="notice">
+        <h3>Holiday Notification</h3>
+        <p>Students can check the academic calendar
+        for holiday information.</p>
+    </div>
+</section>
+
+<!-- Examination Section -->
+<section class="section" id="exams">
+    <h2>Examination Notifications</h2>
+
+    <div class="notice">
+        <h3>Mid-Term Examinations</h3>
+        <p>Check the university examination portal
+        for the latest mid-term schedule.</p>
+    </div>
+
+    <div class="notice">
+        <h3>End-Term Examinations</h3>
+        <p>Examination dates and hall ticket updates
+        will be announced by the university.</p>
+    </div>
+</section>
+
+<!-- Important Links -->
+<section class="section">
+    <h2>Important University Links</h2>
+
+    <ul>
+        <li>
+            <a href="https://www.mallareddyuniversity.ac.in/"
+            target="_blank">
+            University Official Website
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.google.com/"
+            target="_blank">
+            Student Information
+            </a>
+        </li>
+
+        <li>
+            <a href="https://mail.google.com/"
+            target="_blank">
+            Student Email
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- Downloadable Resources -->
+<section class="section" id="resources">
+    <h2>Downloadable Resources</h2>
+
+    <ul>
+        <li>
+            <a href="javascript:void(0)"
+            onclick="downloadResource('Academic Circular')">
+            Download Academic Circular
+            </a>
+        </li>
+
+        <li>
+            <a href="javascript:void(0)"
+            onclick="downloadResource('Examination Guidelines')">
+            Download Examination Guidelines
+            </a>
+        </li>
+
+        <li>
+            <a href="javascript:void(0)"
+            onclick="downloadResource('Student Handbook')">
+            Download Student Handbook
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- Student Enquiry Form -->
+<section class="section" id="contact">
+    <h2>Student Enquiry Form</h2>
+
+    <form id="enquiryForm">
+
+        <label for="name">Student Name:</label>
+        <input type="text" id="name"
+        placeholder="Enter your name" required>
+
+        <label for="roll">Roll Number:</label>
+        <input type="text" id="roll"
+        placeholder="Enter your roll number" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email"
+        placeholder="Enter your email" required>
+
+        <label for="department">Department:</label>
+        <select id="department" required>
+            <option value="">Select Department</option>
+            <option>B.Tech CSE</option>
+            <option>B.Tech ECE</option>
+            <option>B.Tech EEE</option>
+            <option>B.Tech Civil</option>
+            <option>B.Tech Mechanical</option>
+        </select>
+
+        <label for="subject">Enquiry Subject:</label>
+        <input type="text" id="subject"
+        placeholder="Enter enquiry subject" required>
+
+        <label for="query">Your Message:</label>
+        <textarea id="query" rows="4"
+        placeholder="Write your enquiry here"
+        required></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+
+    </form>
+
+    <p id="message"></p>
+</section>
+
+</div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Malla Reddy University</p>
+    <p>Student Helpdesk & Circular Portal</p>
+    <p>Developed by R. Durga | 2611CS040086</p>
+</footer>
+
+<script>
+
+// Form Validation
+document.getElementById("enquiryForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name.trim() === "" || email.trim() === "") {
+        alert("Please fill all required fields.");
+        return;
+    }
+
+    document.getElementById("message").innerHTML =
+    "Thank you, " + name +
+    "! Your enquiry has been submitted successfully.";
+
+    this.reset();
+});
+
+// Download Resources
+function downloadResource(title) {
+
+    let content = title +
+    "\nMalla Reddy University\n" +
+    "Student Helpdesk & Circular Portal";
+
+    let blob = new Blob([content], {
+        type: "text/plain"
+    });
+
+    let link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.download = title.replaceAll(" ", "_") + ".txt";
+
+    link.click();
+
+    URL.revokeObjectURL(link.href);
+}
+
+</script>
+
+</body>
+</html>
