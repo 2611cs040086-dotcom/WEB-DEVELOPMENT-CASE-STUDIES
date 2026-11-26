@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Services Homepage</title>
+
+<style>
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #173b70;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+/* Navigation Bar */
+nav {
+    background: #0879b9;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(120deg, #d9edff, #a9d5fa);
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: #173b70;
+}
+
+.hero p {
+    margin-top: 12px;
+    font-size: 17px;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #0879b9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: #173b70;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* Student Details */
+.details {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+h2 {
+    color: #173b70;
+    margin-bottom: 15px;
+}
+
+/* Services Grid */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Service Cards */
+.card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #ddd;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px #bbb;
+}
+
+.card .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #0879b9;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 9px 18px;
+    background: #0879b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a:hover {
+    background: #173b70;
+}
+
+/* Information Section */
+.info {
+    background: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.info li {
+    margin: 12px 0;
+}
+
+/* Footer */
+footer {
+    background: #173b70;
+    color: white;
+    padding: 22px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Animation */
+.hero h2 {
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <h1>MALLA REDDY UNIVERSITY</h1>
+    <p>Student Services Homepage</p>
+    <p>One Place for All Student Services</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#information">Information</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+
+    <h2>Welcome to Student Services</h2>
+
+    <p>
+        Access all university services easily.
+        Find information about library, transport,
+        hostel, placements and examinations.
+    </p>
+
+    <button onclick="showMessage()">
+        Explore Services
+    </button>
+
+</section>
+
+<main class="container">
+
+<!-- Student Details -->
+<section class="details">
+
+    <h2>Student Details</h2>
+
+    <p><b>Name:</b> R. Durga</p>
+    <p><b>Roll Number:</b> 2611CS040086</p>
+    <p><b>Department:</b> B.Tech CSE</p>
+
+</section>
+
+<!-- Services Section -->
+<section id="services">
+
+    <h2>Our Student Services</h2>
+
+    <div class="services">
+
+        <!-- Library -->
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Library</h3>
+            <p>
+                Access books, journals,
+                digital resources and
+                library information.
+            </p>
+            <a href="https://www.google.com/"
+            target="_blank">Explore</a>
+        </div>
+
+        <!-- Transport -->
+        <div class="card">
+            <div class="icon">🚌</div>
+            <h3>Transport</h3>
+            <p>
+                Get bus routes, timings
+                and university transport
+                information.
+            </p>
+            <a href="https://www.google.com/"
+            target="_blank">Explore</a>
+        </div>
+
+        <!-- Hostel -->
+        <div class="card">
+            <div class="icon">🏠</div>
+            <h3>Hostel</h3>
+            <p>
+                Find hostel facilities,
+                accommodation and
+                student guidelines.
+            </p>
+            <a href="https://www.google.com/"
+            target="_blank">Explore</a>
+        </div>
+
+        <!-- Placements -->
+        <div class="card">
+            <div class="icon">💼</div>
+            <h3>Placements</h3>
+            <p>
+                Explore career opportunities,
+                placement training and
+                recruitment updates.
+            </p>
+            <a href="https://www.google.com/"
+            target="_blank">Explore</a>
+        </div>
+
+        <!-- Examinations -->
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>Examinations</h3>
+            <p>
+                Check examination schedules,
+                results and hall ticket
+                information.
+            </p>
+            <a href="https://www.google.com/"
+            target="_blank">Explore</a>
+        </div>
+
+        <!-- Academic Information -->
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Academic Information</h3>
+            <p>
+                Get syllabus, academic
+                calendars, attendance and
+                course details.
+            </p>
+            <a href="https://www.google.com/"
+            target="_blank">Explore</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Information Section -->
+<section class="info" id="information">
+
+    <h2>Important Information</h2>
+
+    <ul>
+        <li>Check the latest university announcements.</li>
+        <li>Follow the academic calendar regularly.</li>
+        <li>Check examination notifications.</li>
+        <li>Stay updated with placement opportunities.</li>
+        <li>Use university services responsibly.</li>
+    </ul>
+
+</section>
+
+<!-- Contact Section -->
+<section class="info" id="contact">
+
+    <h2>Contact Information</h2>
+
+    <p><b>University:</b> Malla Reddy University</p>
+
+    <p>
+        <b>Website:</b>
+        <a href="https://www.mallareddyuniversity.ac.in/"
+        target="_blank">
+        Official University Website
+        </a>
+    </p>
+
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+
+    <p>© 2026 Malla Reddy University</p>
+
+    <p>Student Services Homepage</p>
+
+    <p>Developed by R. Durga | 2611CS040086</p>
+
+</footer>
+
+<script>
+
+// Explore Services Button
+function showMessage() {
+
+    alert("Welcome! Explore all Student Services below.");
+
+    document.getElementById("services")
+    .scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
